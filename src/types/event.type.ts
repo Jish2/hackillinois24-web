@@ -28,9 +28,4 @@ export enum Tag {
 	siebel_2 = "SIEBEL2",
 }
 
-export enum EventType {
-	meal = "MEAL",
-	minievent = "MINIEVENT",
-	other = "OTHER",
-	workshop = "WORKSHOP",
-}
+export type EventType = "MEAL" | "MINIEVENT" | "OTHER" | "WORKSHOP";
