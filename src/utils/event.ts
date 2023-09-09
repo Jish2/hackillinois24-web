@@ -1,4 +1,4 @@
-import type { Event, EventType } from "@/types/event.type";
+import type { Event, EventType, Location } from "@/types/event.type";
 
 export function getBeginDate(dates: Event[]) {
 	return Math.min(...dates.map((event) => event.startTime));
@@ -25,4 +25,8 @@ export function getGradient(type: EventType) {
 		default:
 			return "";
 	}
+}
+
+export function getMapsURL(location: Location) {
+	return `https://www.google.com/maps/search/?api=1&query=${location.latitude},${location.longitude}`;
 }
