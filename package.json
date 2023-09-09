@@ -10,6 +10,7 @@
 	},
 	"dependencies": {
 		"@nextui-org/card": "^2.0.18",
+		"@nextui-org/chip": "^2.0.18",
 		"@nextui-org/react": "^2.1.10",
 		"autoprefixer": "10.4.15",
 		"clsx": "^2.0.0",
