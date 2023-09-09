@@ -1,12 +1,4 @@
-import type { Event, EventType, Location } from "@/types/event.type";
-
-export function getBeginDate(dates: Event[]) {
-	return Math.min(...dates.map((event) => event.startTime));
-}
-
-export function getEndDate(dates: Event[]) {
-	return Math.max(...dates.map((event) => event.startTime));
-}
+import type { EventType, Location } from "@/types/event.type";
 
 export function getGradient(type: EventType) {
 	switch (type) {

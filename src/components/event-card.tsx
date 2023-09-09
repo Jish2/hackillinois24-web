@@ -6,7 +6,8 @@ import { ClickableChip } from "@/components/clickable-chip";
 import { PrivateChip } from "./private-chip";
 import { LocationIcon } from "@/assets/icons";
 
-import { cn, formatTime } from "@/utils";
+import { cn } from "@/utils";
+import { formatTime } from "@/utils/calendar";
 import { getGradient, getMapsURL } from "@/utils/event";
 
 import { Event } from "@/types/event.type";
