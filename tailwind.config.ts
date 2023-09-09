@@ -18,6 +18,10 @@ const config: Config = {
 			height: {
 				"screen-nav": "calc(100vh - 4rem)",
 			},
+			minWidth: {
+				"screen-side": "calc(100% - 64px)",
+				"screen-side-sm": "calc(100% - 132px)",
+			},
 		},
 	},
 	darkMode: "class",
