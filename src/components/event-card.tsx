@@ -26,7 +26,7 @@ export function EventCard({ event, index }: EventsCardProps) {
 		<div id={`event-container-${index}`} className="flex gap-4">
 			<div id={`event-time-container-${index}`} className="w-32 flex flex-col items-end mt-5">
 				<span className="text-2xl text-gray-300">{formatTime(startTime)}</span>
-				{startTime !== endTime && <span className="text-xl text-gray-600">{formatTime(endTime)}</span>}
+				{startTime !== endTime && <span className="text-xl text-gray-500">{formatTime(endTime)}</span>}
 			</div>
 
 			<div id={`card-wrapper-${index}`} className={cn("p-1 rounded-[16px] w-full", getGradient(eventType))}>
