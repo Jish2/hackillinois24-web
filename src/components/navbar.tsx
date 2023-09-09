@@ -12,7 +12,6 @@ export function CustomNavbar() {
 				<Link href="/">
 					<HackIllinoisLogo width={120} height={40} />
 				</Link>
-				{/* <p className="font-bold text-inherit"></p> */}
 			</NavbarBrand>
 
 			<NavbarContent className="hidden sm:flex gap-8" justify="center">
