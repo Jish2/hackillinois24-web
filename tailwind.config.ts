@@ -20,8 +20,12 @@ const config: Config = {
 			},
 			minWidth: {
 				"screen-side": "calc(100% - 64px)",
-				"screen-side-sm": "calc(100% - 132px)",
+				"screen-side-sm": "calc(100% - 160px)",
 			},
+		},
+
+		screens: {
+			sm: "720px",
 		},
 	},
 	darkMode: "class",
