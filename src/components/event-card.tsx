@@ -24,15 +24,18 @@ export function EventCard({ event, index }: EventsCardProps) {
 
 	return (
 		<div id={`event-container-${index}`} className="flex gap-4">
-			<div id={`event-time-container-${index}`} className="w-32 flex flex-col items-end mt-5">
-				<span className="text-2xl text-gray-300">{formatTime(startTime)}</span>
-				{startTime !== endTime && <span className="text-xl text-gray-500">{formatTime(endTime)}</span>}
+			<div id={`event-time-container-${index}`} className="max-w-[32px] w-32 sm:min-w-[104px] flex flex-col items-start sm:items-end mt-5">
+				<span className="text-md sm:text-2xl text-gray-300">{formatTime(startTime)}</span>
+				{startTime !== endTime && <span className="text-sm sm:text-xl text-gray-500">{formatTime(endTime)}</span>}
 			</div>
 
-			<div id={`card-wrapper-${index}`} className={cn("p-1 rounded-[16px] w-full", getGradient(eventType))}>
+			<div
+				id={`card-wrapper-${index}`}
+				className={cn("p-1 rounded-[16px] min-w-screen-side sm:min-w-screen-side-sm w-full", getGradient(eventType))}
+			>
 				<Card className="space-y-2 p-4 bg-background/60 dark:bg-default-100/80" radius="lg" isBlurred>
 					<div id={`event-header-container-${index}`} className="flex gap-2 items-center">
-						<h1 id={`event-name-${index}`} className="text-2xl font-semibold">
+						<h1 id={`event-name-${index}`} className="text-lg sm:text-2xl font-semibold">
 							{name}
 						</h1>
 						{!!points && <Chip className={cn(getGradient(eventType), "min-h-[1.75rem] h-fit")}>{points} points</Chip>}
@@ -42,14 +45,14 @@ export function EventCard({ event, index }: EventsCardProps) {
 						id={`event-description-${index}`}
 						className={cn(
 							truncateDescription ? "max-h-12 line-clamp-2" : "max-h-[400px] line-clamp-none",
-							"cursor-pointer transition-[max-height] overflow-hidden duration-[2000ms]"
+							"cursor-pointer transition-[max-height] overflow-hidden duration-[2000ms] text-sm sm:text-base"
 						)}
 						onClick={() => setTruncateDescription((p) => !p)}
 					>
 						{description}
 					</p>
 
-					<div id={`locations-container-${index}`} className="flex gap-1 items-center">
+					<div id={`locations-container-${index}`} className="flex gap-1 items-center flex-wrap">
 						{isPrivate && <PrivateChip />}
 
 						{locations.map((location, index) => (
