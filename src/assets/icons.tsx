@@ -102,3 +102,21 @@ export const LockIcon = ({ width, height, fill, stroke, strokeWidth, className }
 		<path d="M7 11V7a5 5 0 0 1 10 0v4" />
 	</svg>
 );
+
+export const ReloadIcon = ({ width, height, fill, stroke, strokeWidth, className }: Icon) => (
+	<svg
+		xmlns="http://www.w3.org/2000/svg"
+		width={width ?? "24"}
+		height={height ?? "24"}
+		viewBox="0 0 24 24"
+		fill={fill ?? "none"}
+		stroke={stroke ?? "currentColor"}
+		strokeWidth={strokeWidth ?? "2"}
+		strokeLinecap="round"
+		strokeLinejoin="round"
+		className={className}
+	>
+		<path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8" />
+		<path d="M21 3v5h-5" />
+	</svg>
+);
