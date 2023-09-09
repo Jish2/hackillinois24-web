@@ -37,7 +37,7 @@ export function NewsletterInput() {
 					input: "text-small",
 					inputWrapper: "h-full font-normal text-default-500 bg-default-400/20 dark:bg-default-500/20",
 				}}
-				placeholder="Newsletter"
+				placeholder="Join newsletter"
 				size="sm"
 				startContent={<EmailIcon width={16} height={16} className="m-1" />}
 				type="search"
