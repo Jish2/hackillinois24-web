@@ -1,6 +1,7 @@
-import { ReloadIcon } from "@/assets/icons";
-import { FETCH_FAILED, TRY_AGAIN } from "@/constants/error-messages";
 import { Button } from "@nextui-org/button";
+import { ReloadIcon } from "@/assets/icons";
+
+import { FETCH_FAILED, TRY_AGAIN } from "@/constants/error-messages";
 
 interface FetchErrorProps {}
 
