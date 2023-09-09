@@ -1,3 +1,5 @@
+import { EVENT_TYPES } from "@/constants";
+
 export interface Event {
 	id: string;
 	name: string;
@@ -28,4 +30,4 @@ export enum Tag {
 	siebel_2 = "SIEBEL2",
 }
 
-export type EventType = "MEAL" | "MINIEVENT" | "OTHER" | "WORKSHOP";
+export type EventType = (typeof EVENT_TYPES)[number];
