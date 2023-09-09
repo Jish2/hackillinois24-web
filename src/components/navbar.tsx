@@ -9,7 +9,9 @@ export function CustomNavbar() {
 	return (
 		<Navbar isBordered>
 			<NavbarBrand>
-				<HackIllinoisLogo width={120} height={40} />
+				<Link href="/">
+					<HackIllinoisLogo width={120} height={40} />
+				</Link>
 				{/* <p className="font-bold text-inherit"></p> */}
 			</NavbarBrand>
 
