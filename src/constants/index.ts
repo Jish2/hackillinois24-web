@@ -5,19 +5,11 @@ export const EVENT_TYPES = ["MEAL", "MINIEVENT", "OTHER", "WORKSHOP"] as const;
 
 export const NAVBAR_ITEMS = [
 	{
-		label: "Home",
-		href: "#",
+		label: "built by jgoon",
+		href: "https://jgoon.com/",
 	},
 	{
-		label: "Mentors",
-		href: "#",
-	},
-	{
-		label: "Prizes",
-		href: "#",
-	},
-	{
-		label: "Schedule",
-		href: "#",
+		label: "github repo",
+		href: "https://github.com/Jish2/hackillinois24-web",
 	},
 ];
