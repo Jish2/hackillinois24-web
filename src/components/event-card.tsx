@@ -24,7 +24,7 @@ export function EventCard({ event, index }: EventsCardProps) {
 	const [truncateDescription, setTruncateDescription] = useState<boolean>(true);
 
 	return (
-		<div id={`event-container-${index}`} className="flex gap-4">
+		<div id={`event-container-${index}`} className="flex gap-4" aria-label="event card">
 			<div id={`event-time-container-${index}`} className="max-w-[32px] w-32 sm:min-w-[104px] flex flex-col items-start sm:items-end mt-5">
 				<span className="text-md sm:text-2xl">{formatTime(startTime)}</span>
 				{startTime !== endTime && <span className="text-sm sm:text-xl text-foreground-400">{formatTime(endTime)}</span>}
@@ -49,6 +49,7 @@ export function EventCard({ event, index }: EventsCardProps) {
 							"cursor-pointer transition-[max-height] overflow-hidden duration-[2000ms] text-sm sm:text-base"
 						)}
 						onClick={() => setTruncateDescription((p) => !p)}
+						aria-expanded={!truncateDescription}
 					>
 						{description}
 					</p>

@@ -80,7 +80,9 @@ export default function Home({ events }: InferGetStaticPropsType<typeof getStati
 				) : (
 					<>
 						<div id="day-label-container" className="sm:flex sm:items-end sm:gap-4">
-							<h1 className="text-3xl font-semibold">{selectedDateLabel}</h1>
+							<h1 className="text-3xl font-semibold" aria-label="Current selected date">
+								{selectedDateLabel}
+							</h1>
 							<span className="text-foreground-400 sm:text-lg">CDT TIME</span>
 						</div>
 						<EventsFilter events={events} />

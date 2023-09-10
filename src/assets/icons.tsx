@@ -19,6 +19,7 @@ export const MegaphoneIcon = ({ width, height, fill, stroke, strokeWidth, classN
 		strokeLinecap="round"
 		strokeLinejoin="round"
 		className={className}
+		aria-label="Megaphone icon"
 	>
 		<path d="m3 11 18-5v12L3 14v-3z" />
 		<path d="M11.6 16.8a3 3 0 1 1-5.8-1.6" />
@@ -37,6 +38,7 @@ export const SunIcon = ({ width, height, fill, stroke, strokeWidth, className }:
 		strokeLinecap="round"
 		strokeLinejoin="round"
 		className={className}
+		aria-label="Sun icon"
 	>
 		<circle cx="12" cy="12" r="4" />
 		<path d="M12 2v2" />
@@ -62,6 +64,7 @@ export const MoonIcon = ({ width, height, fill, stroke, strokeWidth, className }
 		strokeLinecap="round"
 		strokeLinejoin="round"
 		className={className}
+		aria-label="Moon icon"
 	>
 		<path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
 	</svg>
@@ -79,6 +82,7 @@ export const LocationIcon = ({ width, height, fill, stroke, strokeWidth, classNa
 		strokeLinecap="round"
 		strokeLinejoin="round"
 		className={className}
+		aria-label="Location icon"
 	>
 		<path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
 		<circle cx="12" cy="10" r="3" />
@@ -97,6 +101,7 @@ export const LockIcon = ({ width, height, fill, stroke, strokeWidth, className }
 		strokeLinecap="round"
 		strokeLinejoin="round"
 		className={className}
+		aria-label="Lock icon"
 	>
 		<rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
 		<path d="M7 11V7a5 5 0 0 1 10 0v4" />
@@ -115,6 +120,7 @@ export const ReloadIcon = ({ width, height, fill, stroke, strokeWidth, className
 		strokeLinecap="round"
 		strokeLinejoin="round"
 		className={className}
+		aria-label="Reload icon"
 	>
 		<path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8" />
 		<path d="M21 3v5h-5" />
@@ -133,6 +139,7 @@ export const EmailIcon = ({ width, height, fill, stroke, strokeWidth, className 
 		strokeLinecap="round"
 		strokeLinejoin="round"
 		className={className}
+		aria-label="Email icon"
 	>
 		<rect width="16" height="13" x="6" y="4" rx="2" />
 		<path d="m22 7-7.1 3.78c-.57.3-1.23.3-1.8 0L6 7" />
@@ -152,6 +159,7 @@ export const SendIcon = ({ width, height, fill, stroke, strokeWidth, className }
 		strokeLinecap="round"
 		strokeLinejoin="round"
 		className={className}
+		aria-label="Send icon"
 	>
 		<path d="m22 2-7 20-4-9-9-4Z" />
 		<path d="M22 2 11 13" />
