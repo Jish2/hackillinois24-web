@@ -50,7 +50,6 @@ export default function CalendarPicker({ events }: CalendarPickerProps) {
 								});
 							}}
 							key={i}
-							role={highlightDay ? "button" : "div"}
 							aria-current={todaySelected}
 						>
 							{day}

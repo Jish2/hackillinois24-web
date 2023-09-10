@@ -49,7 +49,6 @@ export function EventCard({ event, index }: EventsCardProps) {
 							"cursor-pointer transition-[max-height] overflow-hidden duration-[2000ms] text-sm sm:text-base"
 						)}
 						onClick={() => setTruncateDescription((p) => !p)}
-						aria-expanded={!truncateDescription}
 					>
 						{description}
 					</p>

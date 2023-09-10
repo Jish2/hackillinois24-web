@@ -173,7 +173,6 @@ export const HackIllinoisLogo = ({ width, height }: Icon) => (
 		height={height ?? "49"}
 		viewBox="0 0 149 49"
 		fill="none"
-		role="img"
 		aria-label="HackIllinois logo"
 	>
 		<path
