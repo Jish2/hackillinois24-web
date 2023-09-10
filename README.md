@@ -17,3 +17,9 @@ pnpm install && pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Lighthouse
+
+![ligthouse screenshot](lighthouse-ss.png "100 97 100")
+
+Full performance overview in [lighthouse.pdf](https://github.com/Jish2/hackillinois24-web/blob/main/lighthouse.pdf)
