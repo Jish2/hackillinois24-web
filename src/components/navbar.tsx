@@ -5,7 +5,7 @@ import Link from "next/link";
 
 import { NAVBAR_ITEMS } from "@/constants";
 
-export function CustomNavbar() {
+export default function CustomNavbar() {
 	return (
 		<Navbar isBordered className="bg-[var(--background)]">
 			<NavbarBrand>

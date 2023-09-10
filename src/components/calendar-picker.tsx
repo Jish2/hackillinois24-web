@@ -11,7 +11,7 @@ interface CalendarPickerProps {
 	events: Event[] | null;
 }
 
-export function CalendarPicker({ events }: CalendarPickerProps) {
+export default function CalendarPicker({ events }: CalendarPickerProps) {
 	const beginDate: MonthDay = events ? getBeginDate(events) : fallbackDate;
 	const endDate: MonthDay = events ? getEndDate(events) : fallbackDate;
 

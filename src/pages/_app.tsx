@@ -1,13 +1,18 @@
 import { Providers } from "@/components/providers";
-import { CustomNavbar } from "@/components/navbar";
-import { Inter } from "next/font/google";
+import dynamic from "next/dynamic";
+import Head from "next/head";
 
+import { Inter } from "next/font/google";
 import "@/styles/globals.css";
 
 import type { AppProps } from "next/app";
-import Head from "next/head";
+import { Loading } from "@/components/loading";
 
 const inter = Inter({ subsets: ["latin"] });
+
+const DynamicNavbar = dynamic(() => import("../components/navbar"), {
+	loading: () => <Loading />,
+});
 
 export default function App({ Component, pageProps }: AppProps) {
 	return (
@@ -15,7 +20,7 @@ export default function App({ Component, pageProps }: AppProps) {
 			<Head>
 				<title>HackIllinois Schedule</title>
 			</Head>
-			<CustomNavbar />
+			<DynamicNavbar />
 			<Component {...pageProps} className={inter.className} />
 		</Providers>
 	);

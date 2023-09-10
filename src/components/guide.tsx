@@ -4,7 +4,7 @@ import { EVENT_TYPES } from "@/constants";
 
 interface GuideProps {}
 
-export function Guide({}: GuideProps) {
+export default function Guide({}: GuideProps) {
 	return (
 		<div className="">
 			<h1 className="text-2xl font-semibold mb-2">Guide</h1>

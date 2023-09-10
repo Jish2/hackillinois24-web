@@ -1,14 +1,22 @@
 import { DateLabel } from "./../components/date-label";
 
 import { FetchError } from "@/components/fetch-error";
-import { CalendarPicker } from "@/components/calendar-picker";
-import { Guide } from "@/components/guide";
 import { EventsFilter } from "@/components/events-filter";
+import { Loading } from "@/components/loading";
 
+import dynamic from "next/dynamic";
 import { EVENTS_API } from "@/constants/api-url";
 
 import type { GetStaticProps, InferGetStaticPropsType } from "next";
 import type { Event } from "@/types/event.type";
+
+const DynamicCalendarPicker = dynamic(() => import("../components/calendar-picker"), {
+	loading: () => <Loading />,
+});
+
+const DynamicGuide = dynamic(() => import("../components/guide"), {
+	loading: () => <Loading />,
+});
 
 async function getEvents(): Promise<Event[] | null> {
 	try {
@@ -62,8 +70,8 @@ export default function Home({ events }: InferGetStaticPropsType<typeof getStati
 				id="sidebar-wrapper"
 				className="w-full sm:max-w-[308px] sm:h-screen-nav flex sm:flex-col p-8 gap-12 justify-between sm:justify-normal max-w-[450px] mx-auto overflow-x-scroll"
 			>
-				<CalendarPicker events={events} />
-				<Guide />
+				<DynamicCalendarPicker events={events} />
+				<DynamicGuide />
 			</aside>
 			<main id="main-content" className="pt-0 sm:pt-8 flex-1 sm:h-screen-nav sm:overflow-y-scroll p-8 flex flex-col gap-4 sm:pl-0">
 				{events === null ? (
