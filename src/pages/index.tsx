@@ -1,12 +1,15 @@
+import { useDateFilter } from "@/hooks/useDateFilter";
+
 import { FetchError } from "@/components/fetch-error";
-import { EventCard } from "@/components/event-card";
 import { CalendarPicker } from "@/components/calendar-picker";
 import { Guide } from "@/components/guide";
+import { EventsFilter } from "@/components/events-filter";
 
 import { EVENTS_API } from "@/constants/api-url";
 
 import type { GetStaticProps, InferGetStaticPropsType } from "next";
 import type { Event } from "@/types/event.type";
+import { dayOfWeek, fallbackDate, months } from "@/types/calendar.type";
 
 async function getEvents(): Promise<Event[] | null> {
 	try {
@@ -54,11 +57,15 @@ export const getStaticProps: GetStaticProps<{
 };
 
 export default function Home({ events }: InferGetStaticPropsType<typeof getStaticProps>) {
+	const { selectedDate } = useDateFilter();
+	const selectedDateLabel =
+		selectedDate === fallbackDate ? "Loading..." : `${dayOfWeek[selectedDate.dow]}, ${months[selectedDate.month]} ${selectedDate.day}`;
+
 	return (
 		<div id="main-wrapper" className="flex sm:flex-row flex-col sm:overflow-clip">
 			<aside
 				id="sidebar-wrapper"
-				className="w-full sm:max-w-[240px] sm:h-screen-nav flex sm:flex-col p-8 gap-12 justify-between sm:justify-normal max-w-[400px] mx-auto"
+				className="w-full sm:max-w-[308px] sm:h-screen-nav flex sm:flex-col p-8 gap-12 justify-between sm:justify-normal max-w-[450px] mx-auto overflow-x-scroll"
 			>
 				<CalendarPicker events={events} />
 				<Guide />
@@ -73,12 +80,10 @@ export default function Home({ events }: InferGetStaticPropsType<typeof getStati
 				) : (
 					<>
 						<div id="day-label-container" className="sm:flex sm:items-end sm:gap-4">
-							<h1 className="text-3xl font-semibold">Friday, April 9</h1>
+							<h1 className="text-3xl font-semibold">{selectedDateLabel}</h1>
 							<span className="text-gray-400 font-light sm:text-lg">CDT TIME</span>
 						</div>
-						{events.map((event, index) => {
-							return <EventCard event={event} key={event.id} index={index} />;
-						})}
+						<EventsFilter events={events} />
 					</>
 				)}
 			</main>
