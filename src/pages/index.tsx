@@ -1,4 +1,4 @@
-import { useDateFilter } from "@/hooks/useDateFilter";
+import { DateLabel } from "./../components/date-label";
 
 import { FetchError } from "@/components/fetch-error";
 import { CalendarPicker } from "@/components/calendar-picker";
@@ -9,7 +9,6 @@ import { EVENTS_API } from "@/constants/api-url";
 
 import type { GetStaticProps, InferGetStaticPropsType } from "next";
 import type { Event } from "@/types/event.type";
-import { dayOfWeek, fallbackDate, months } from "@/types/calendar.type";
 
 async function getEvents(): Promise<Event[] | null> {
 	try {
@@ -57,10 +56,6 @@ export const getStaticProps: GetStaticProps<{
 };
 
 export default function Home({ events }: InferGetStaticPropsType<typeof getStaticProps>) {
-	const { selectedDate } = useDateFilter();
-	const selectedDateLabel =
-		selectedDate === fallbackDate ? "Loading..." : `${dayOfWeek[selectedDate.dow]}, ${months[selectedDate.month]} ${selectedDate.day}`;
-
 	return (
 		<div id="main-wrapper" className="flex sm:flex-row flex-col sm:overflow-clip">
 			<aside
@@ -79,12 +74,7 @@ export default function Home({ events }: InferGetStaticPropsType<typeof getStati
 					<FetchError />
 				) : (
 					<>
-						<div id="day-label-container" className="sm:flex sm:items-end sm:gap-4">
-							<h1 className="text-3xl font-semibold" aria-label="Current selected date">
-								{selectedDateLabel}
-							</h1>
-							<span className="text-foreground-400 sm:text-lg">CDT TIME</span>
-						</div>
+						<DateLabel />
 						<EventsFilter events={events} />
 					</>
 				)}
