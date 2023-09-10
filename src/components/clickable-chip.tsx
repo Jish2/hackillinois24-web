@@ -1,6 +1,6 @@
 import { Chip } from "@nextui-org/chip";
 
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 
 interface ClickableChipProps {
 	href?: string;

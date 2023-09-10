@@ -1,7 +1,10 @@
-import { Event } from "@/types/event.type";
-import { EventCard } from "@/components/event-card";
 import { useDateFilter } from "@/hooks/useDateFilter";
+
+import { EventCard } from "@/components/event-card";
+
 import { getBeginDate } from "@/utils/calendar";
+
+import { Event } from "@/types/event.type";
 
 interface EventsFilterProps {
 	events: Event[];

@@ -1,7 +1,8 @@
 import { FormEvent, useEffect } from "react";
 
 import { EmailIcon, SendIcon } from "@/assets/icons";
-import { Button, Input } from "@nextui-org/react";
+import { Input } from "@nextui-org/input";
+import { Button } from "@nextui-org/button";
 
 import { useNewsletter } from "@/hooks/useNewsletter";
 

@@ -19,7 +19,7 @@ export function DateFilterProvider({ children }: { children: ReactNode }) {
 	return <DateFilterContext.Provider value={value}>{children}</DateFilterContext.Provider>;
 }
 
-export function useDateFilter(beginDate?: MonthDay) {
+export function useDateFilter() {
 	const context = useContext(DateFilterContext);
 	if (context === undefined || !context) throw new Error("Provider is undefined.");
 	return context;

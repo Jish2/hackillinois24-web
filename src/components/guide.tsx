@@ -1,6 +1,5 @@
 import { cn, titleString } from "@/utils";
 import { getGradient } from "@/utils/event";
-
 import { EVENT_TYPES } from "@/constants";
 
 interface GuideProps {}

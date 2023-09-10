@@ -1,9 +1,9 @@
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem } from "@nextui-org/navbar";
 import { HackIllinoisLogo } from "@/assets/icons";
+import { NewsletterInput } from "@/components/newsletter-input";
 import Link from "next/link";
 
 import { NAVBAR_ITEMS } from "@/constants";
-import { NewsletterInput } from "./newsletter-input";
 
 export function CustomNavbar() {
 	return (
