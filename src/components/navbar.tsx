@@ -7,7 +7,7 @@ import { NAVBAR_ITEMS } from "@/constants";
 
 export function CustomNavbar() {
 	return (
-		<Navbar isBordered>
+		<Navbar isBordered className="bg-[var(--background)]">
 			<NavbarBrand>
 				<Link href="/">
 					<HackIllinoisLogo width={120} height={40} />

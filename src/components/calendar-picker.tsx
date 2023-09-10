@@ -37,8 +37,8 @@ export function CalendarPicker({ events }: CalendarPickerProps) {
 						<button
 							className={cn(
 								"w-7 h-7 rounded-full flex items-center justify-center text-sm",
-								highlightDay && "bg-gray-700 cursor-pointer",
-								todaySelected && "bg-orange-500"
+								highlightDay && "bg-foreground-400 cursor-pointer text-white",
+								todaySelected && "bg-orange-500 text-white"
 							)}
 							onClick={() => {
 								if (!highlightDay) return;

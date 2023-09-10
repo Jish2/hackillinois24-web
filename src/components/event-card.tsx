@@ -26,15 +26,15 @@ export function EventCard({ event, index }: EventsCardProps) {
 	return (
 		<div id={`event-container-${index}`} className="flex gap-4">
 			<div id={`event-time-container-${index}`} className="max-w-[32px] w-32 sm:min-w-[104px] flex flex-col items-start sm:items-end mt-5">
-				<span className="text-md sm:text-2xl text-gray-300">{formatTime(startTime)}</span>
-				{startTime !== endTime && <span className="text-sm sm:text-xl text-gray-500">{formatTime(endTime)}</span>}
+				<span className="text-md sm:text-2xl">{formatTime(startTime)}</span>
+				{startTime !== endTime && <span className="text-sm sm:text-xl text-foreground-400">{formatTime(endTime)}</span>}
 			</div>
 
 			<div
 				id={`card-wrapper-${index}`}
 				className={cn("p-1 rounded-[16px] min-w-screen-side sm:min-w-screen-side-sm w-full", getGradient(eventType))}
 			>
-				<Card className="space-y-2 p-4 bg-background/60 dark:bg-default-100/80" radius="lg" isBlurred>
+				<Card className="space-y-2 p-4 dark:bg-default-100/80 bg-background/60" radius="lg" isBlurred>
 					<div id={`event-header-container-${index}`} className="flex gap-2 items-center">
 						<h1 id={`event-name-${index}`} className="text-lg sm:text-2xl font-semibold">
 							{name}
