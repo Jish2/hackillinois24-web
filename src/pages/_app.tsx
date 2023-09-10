@@ -1,4 +1,4 @@
-import { Providers } from "@/pages/providers";
+import { Providers } from "@/components/providers";
 import { CustomNavbar } from "@/components/navbar";
 import { Inter } from "next/font/google";
 
