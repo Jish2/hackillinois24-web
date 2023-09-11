@@ -34,19 +34,21 @@ export function EventCard({ event, index }: EventsCardProps) {
 				id={`card-wrapper-${index}`}
 				className={cn("p-1 rounded-[16px] min-w-screen-side sm:min-w-screen-side-sm w-full", getGradient(eventType))}
 			>
-				<Card className="space-y-2 p-4 dark:bg-default-100/80 bg-background/60" radius="lg" isBlurred>
+				<Card className="space-y-2 p-4 bg-default-100/80 dark:bg-default-800/80" radius="lg" isBlurred>
 					<div id={`event-header-container-${index}`} className="flex gap-2 items-center">
-						<h1 id={`event-name-${index}`} className="text-lg sm:text-2xl font-semibold">
+						<h1 id={`event-name-${index}`} className="text-lg sm:text-2xl font-semibold dark:text-foreground-100">
 							{name}
 						</h1>
-						{!!points && <Chip className={cn(getGradient(eventType), "min-h-[1.75rem] h-fit")}>{points} points</Chip>}
+						{!!points && (
+							<Chip className={cn(getGradient(eventType), "min-h-[1.75rem] h-fit dark:text-foreground-100")}>{points} points</Chip>
+						)}
 					</div>
 
 					<p
 						id={`event-description-${index}`}
 						className={cn(
 							truncateDescription ? "max-h-12 line-clamp-2" : "max-h-[400px] line-clamp-none",
-							"cursor-pointer transition-[max-height] overflow-hidden duration-[2000ms] text-sm sm:text-base"
+							"cursor-pointer transition-[max-height] overflow-hidden duration-[2000ms] text-sm sm:text-base dark:text-foreground-100"
 						)}
 						onClick={() => setTruncateDescription((p) => !p)}
 					>

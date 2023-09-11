@@ -28,7 +28,6 @@ const config: Config = {
 			sm: "720px",
 		},
 	},
-	darkMode: "class",
 	plugins: [nextui()],
 };
 export default config;

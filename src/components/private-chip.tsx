@@ -11,7 +11,7 @@ export function PrivateChip({}: PrivateChipProps) {
 		<Popover placement="bottom">
 			<PopoverTrigger>
 				<button>
-					<Chip startContent={<LockIcon width={12} height={12} className="m-1 mr-0" />} variant="faded" color="default">
+					<Chip className="dark" startContent={<LockIcon width={12} height={12} className="m-1 mr-0" />} variant="faded" color="default">
 						{PRIVATE_EVENT}
 					</Chip>
 				</button>
