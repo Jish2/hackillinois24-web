@@ -44,8 +44,8 @@ export function NewsletterInput() {
 				type="search"
 				disabled={isLoading}
 			/>
-			<Button disabled={isLoading} isIconOnly color="primary" aria-label="join newsletter" type="submit" className="rounded-[8px]">
-				<SendIcon width={16} height={16} />
+			<Button disabled={isLoading} isIconOnly aria-label="join newsletter" type="submit" className="rounded-[8px] bg-orange-500">
+				<SendIcon width={16} height={16} className="dark:text-foreground-100" />
 			</Button>
 		</form>
 	);
